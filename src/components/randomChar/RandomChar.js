@@ -16,7 +16,7 @@ const RandomChar = () => {
     
     useEffect(() => {
         updateChar();
-        const timerId = setInterval(this.updateChar, 60000);
+        const timerId = setInterval(updateChar, 60000);
 
         return () => {
             clearInterval(timerId)
@@ -63,7 +63,7 @@ const RandomChar = () => {
                 <p className="randomchar__title">
                     Or choose another one
                 </p>
-                <button onClick={this.updateChar} className="button button__main">
+                <button onClick={updateChar} className="button button__main">
                     <div className="inner">try it</div>
                 </button>
                 <img src={mjolnir} alt="mjolnir" className="randomchar__decoration"/>
